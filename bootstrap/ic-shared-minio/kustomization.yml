@@ -7,16 +7,20 @@ namespace: ic-shared-minio
 commonLabels:
   component: minio
 
+images:
+  - name: quay.io/minio/minio
+    newTag: RELEASE.2024-02-26T09-33-48Z
+
 resources:
-# wave 0
-- namespace.yml
-# wave 1
-- pvc.yml
-- serviceaccount.yml
-- create-root-user-job.yml
-- deployment.yml
-- service.yml
-- route.yml
-# wave 2
-- create-data-connection.yml
-- create-buckets.yaml
+  # wave 0
+  - namespace.yml
+  # wave 1
+  - pvc.yml
+  - serviceaccount.yml
+  - create-root-user-job.yml
+  - deployment.yml
+  - service.yml
+  - route.yml
+  # wave 2
+  - create-data-connection.yml
+  - create-buckets.yaml
