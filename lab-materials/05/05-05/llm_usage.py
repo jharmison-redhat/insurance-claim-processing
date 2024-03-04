@@ -7,7 +7,7 @@ from langchain.prompts import PromptTemplate
 from langchain.evaluation import load_evaluator
 from langchain.embeddings import HuggingFaceEmbeddings
 
-INFERENCE_SERVER_URL = "http://llm.ic-shared-llm.svc.cluster.local:3000"
+INFERENCE_SERVER_URL = "https://hf-tgi-llm-hosting.apps.rhods-internal.61tk.p1.openshiftapps.com:443"
 MAX_NEW_TOKENS = 512
 TOP_K = 10
 TOP_P = 0.95

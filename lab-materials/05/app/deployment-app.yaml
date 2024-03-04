@@ -29,19 +29,19 @@ spec:
                 fieldRef:
                   fieldPath: metadata.namespace
             - name: INFERENCE_SERVER_URL
-              value: http://llm.ic-shared-llm.svc.cluster.local:3000/
+              value: https://hf-tgi-llm-hosting.apps.rhods-internal.61tk.p1.openshiftapps.com:443/
             - name: MAX_NEW_TOKENS
-              value: '1024'
+              value: "1024"
             - name: TOP_K
-              value: '10'
+              value: "10"
             - name: TOP_P
-              value: '0.95'
+              value: "0.95"
             - name: TYPICAL_P
-              value: '0.95'
+              value: "0.95"
             - name: TEMPERATURE
-              value: '0.01'
+              value: "0.01"
             - name: REPETITION_PENALTY
-              value: '1.03'
+              value: "1.03"
             - name: POSTGRES_HOST
               value: claimdb.$(NAMESPACE).svc.cluster.local
             - name: POSTGRES_DB
@@ -60,7 +60,7 @@ spec:
                   name: claimdb
                   key: database-password
             - name: POSTGRES_PORT
-              value: '5432'
+              value: "5432"
             - name: S3_ENDPOINT_URL
               value: http://minio.ic-shared-minio.svc.cluster.local:9000
             - name: IMAGES_BUCKET
@@ -91,3 +91,4 @@ spec:
       maxSurge: 25%
   revisionHistoryLimit: 10
   progressDeadlineSeconds: 600
+
