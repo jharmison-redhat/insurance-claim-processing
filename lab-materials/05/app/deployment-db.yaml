@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: claimdb
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   selector:
     matchLabels:
@@ -33,7 +33,7 @@ spec:
             exec:
               command:
                 - /usr/libexec/check-container
-                - '--live'
+                - "--live"
             initialDelaySeconds: 120
             timeoutSeconds: 10
             periodSeconds: 10
