@@ -25,6 +25,6 @@ def test_security(endpoint, expected_model_sha, expected_serving_sha):
 
 if __name__ == '__main__':
     info_endpoint = "https://hf-tgi-llm-hosting.apps.rhods-internal.61tk.p1.openshiftapps.com:443" + "/info"
-    expected_model_sha = "b70aa86578567ba3301b21c8a27bea4e8f6d6d61"
-    expected_serving_sha = "630800eed37b15c4b0c9eb8e6ab47212026720f7"
+    expected_model_sha = "9ab9e76e2b09f9f29ea2d56aa5bd139e4445c59e"
+    expected_serving_sha = "7a6fad6aac67d9bf21fe75c034a6bcab5dbd88d2"
     test_security(info_endpoint, expected_model_sha, expected_serving_sha)
